@@ -1,12 +1,13 @@
-RSpec.describe 'The HelloWorld App' do
+# frozen_string_literal: true
 
-    def app
-        HelloController
-    end
+RSpec.describe HelloController do
+  def app
+    HelloController
+  end
 
-    it "says hello" do
-        get '/'
-        expect(last_response).to be_ok
-        expect(last_response.body).to eq('Hello world!')
-    end
+  it 'says hello' do
+    get '/'
+    expect(last_response).to be_ok
+    expect(last_response.body).to eq('Hello world!')
+  end
 end

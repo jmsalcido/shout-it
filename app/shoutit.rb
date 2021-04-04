@@ -1,8 +1,10 @@
+# frozen_string_literal: true
+
 require 'sinatra/base'
 
-if ['development', 'test'].include? ENV['APP_ENV'] then
-    require 'pry'
-    require 'pry-byebug'
+if %w[development test].include? ENV['APP_ENV']
+  require 'pry'
+  require 'pry-byebug'
 end
 
 # required controllers

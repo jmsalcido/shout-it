@@ -1,0 +1,18 @@
+require: 
+  - rubocop-rspec
+  - rubocop-rake
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+# Rspec
+RSpec/MultipleExpectations:
+  Enabled: false
+
+# Rubocop new features
+# enable, disable, pending
+AllCops:
+  NewCops: disable  

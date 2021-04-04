@@ -1,5 +1,5 @@
-class HelloController < ApplicationController
+class HelloController < AppController
   get '/' do
-   'Hello world!'
+    'Hello world!'
   end
 end

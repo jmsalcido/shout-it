@@ -1,5 +1,4 @@
-require 'sinatra/base'
+$LOAD_PATH.push File.expand_path('app', __dir__)
+require 'shoutit'
 
-Dir.glob('./app/{helpers,controllers}/*.rb').each { |file| require file }
-
-map('/hello') { run HelloController }
+map('/') { run HelloController }

@@ -22,7 +22,12 @@ jobs:
       with:
         ruby-version: ${{ matrix.ruby-version }}
         bundler-cache: true # runs 'bundle install' and caches installed gems automatically
-    - name: Run rubocop
+    - name: rubocop
       uses: reviewdog/action-rubocop@v1
+      with:
+          rubocop_version: gemfile
+          rubocop_extensions: rubocop-rspec:gemfile rubocop-rake:gemfile
+          github_token: ${{ secrets.github_token }}
+          reporter: github-pr-review # Default is github-pr-check
     - name: Run tests
       run: bundle exec rspec
